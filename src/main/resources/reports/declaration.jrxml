@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="declaration" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2ba07460-8e4b-41a9-ab7b-b77b4535e22f">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="392"/>
+    <property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="595"/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="materniteAdapter "/>
+    <parameter name="iddec" class="java.lang.Integer"/>
+    <parameter name="ville" class="java.lang.String"/>
+    <queryString language="SQL">
+        <![CDATA[select date(b.creation) as dateenreg,time(b.creation) as heureenreg,
+                c.libelle as lieunaissance, concat(b.nombebe,' ',b.prenbebe) as bebe,
+                case
+                when b.sexe = 0 then 'M'
+                else 'F'
+                end as sexe ,
+                b.pere, (select libelle from anf_commune where idcom= b.villenaisspere) as villpere,
+                (select libelle from anf_profession where idprof= b.professionpere) as profpere,
+                b.domicilepere,
+                (select libelle from anf_nationalite where idnat= b.nationperer) as natpere,
+                b.mere,
+                (select libelle from anf_commune where idcom= b.villenaissmere) as villmere,
+                (select libelle from anf_profession where idprof= b.professionmere) as profmere,
+                b.domicilemere,
+                (select libelle from anf_nationalite where idnat= b.nationmere) as natmere,
+                b.dates,b.heure,
+                b.declarationde,
+                (select libelle from anf_langues where idlan= b.recuelangue) as langue,
+                b.assistancede,a.nom as sagefemme, b.datenaisspere,b.datenaissmere
+                 from anf_users a inner join anf_declaration b on a.idusr=b.idusr inner
+                join anf_commune c on b.lieunaissance=c.idcom where iddec=$P{iddec}]]>
+    </queryString>
+    <field name="dateenreg" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="dateenreg"/>
+    </field>
+    <field name="heureenreg" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="heureenreg"/>
+    </field>
+    <field name="lieunaissance" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="lieunaissance"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_commune"/>
+    </field>
+    <field name="bebe" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="bebe"/>
+    </field>
+    <field name="sexe" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="sexe"/>
+    </field>
+    <field name="pere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="pere"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="villpere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="villpere"/>
+    </field>
+    <field name="profpere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="profpere"/>
+    </field>
+    <field name="domicilepere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="domicilepere"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="natpere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="natpere"/>
+    </field>
+    <field name="mere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="mere"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="villmere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="villmere"/>
+    </field>
+    <field name="profmere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="profmere"/>
+    </field>
+    <field name="domicilemere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="domicilemere"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="natmere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="natmere"/>
+    </field>
+    <field name="dates" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="dates"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="heure" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="heure"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="declarationde" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="declarationde"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="langue" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="langue"/>
+    </field>
+    <field name="assistancede" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="assistancede"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="sagefemme" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="sagefemme"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_users"/>
+    </field>
+    <field name="datenaisspere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="datenaisspere"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="datenaissmere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="datenaissmere"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="49" splitType="Stretch">
+            <staticText>
+                <reportElement x="100" y="2" width="360" height="40" uuid="70514d74-26a9-4a06-92aa-cb67729357ab"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="24" isBold="true" isUnderline="true"/>
+                </textElement>
+                <text><![CDATA[Déclaration de naissance]]></text>
+            </staticText>
+        </band>
+    </title>
+    <detail>
+        <band height="709" splitType="Stretch">
+            <textField>
+                <reportElement x="160" y="10" width="200" height="20" uuid="32c9e0da-7614-41d9-93e0-d8fccdacb36f"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{dateenreg}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="10" width="130" height="20" uuid="b3f52c82-cba4-427e-b1e5-467837cfb9a0"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[1 Le : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="51" width="200" height="20" uuid="004fc64c-ad57-47ba-a81c-f1db43a769d5"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{lieunaissance}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="51" width="130" height="20" uuid="1f747b6b-4f35-4a69-8a21-10a920978f99"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[3 est né à : ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="30" y="30" width="130" height="20" uuid="ba6ff719-aa08-484f-8b86-ac9137f63bca"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[2 à : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="70" width="200" height="20" uuid="8f3e88ee-a919-4b7f-b6df-a0318799a86b"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{lieunaissance}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="71" width="130" height="20" uuid="3308a3fa-8750-48ae-9933-6731cf203949"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[4 commune de : ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="30" y="91" width="130" height="20" uuid="7391d1b4-58aa-469c-85b3-fc6b883196a8"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[5 l'enfant : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="111" width="100" height="19" uuid="139f9c98-c7dd-4df5-906b-0b96e22877a7"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{sexe}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="111" width="130" height="19" uuid="510e7d2a-e3e3-4adc-830f-23bb930a6830"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[6 sexe : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="130" width="270" height="22" uuid="ce3306e6-e013-4c3f-9d18-c4d520930372"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{pere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="130" width="130" height="22" uuid="e760672b-739a-47c3-a9f6-0b5ba8a35cb7"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[7 ayant pour père : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="152" width="163" height="21" uuid="32759191-1e21-43c0-9ef8-be0b458f6da3"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{datenaisspere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="152" width="130" height="21" uuid="bb6e2772-050c-4fcf-863f-4793fe06c2ef"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[8 né : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="173" width="240" height="20" uuid="8c7f9e60-835a-4543-a3f8-4f7654eba2d6"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{villpere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="173" width="130" height="20" uuid="39f7dfb2-8a9f-4bcc-b09e-5fbd608aaab4"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[9 à : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="193" width="240" height="22" uuid="ac06dc1b-2798-4645-80d1-5e1fcf76d0eb"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{profpere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="193" width="130" height="22" uuid="681443b5-08b5-4cf5-a67f-452f8423f08f"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[10 profession : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="215" width="240" height="22" uuid="b267af29-cff5-4fac-9aaa-9c14fe3caccc"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{domicilepere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="215" width="130" height="22" uuid="35724555-e903-44ff-a341-8600bce89b06"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[11 domicilié à : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="237" width="240" height="22" uuid="39ad9ee0-aca2-4c8e-aa85-012b6b69eb14"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{natpere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="237" width="130" height="22" uuid="86cdf91d-e120-4bea-97bf-39ed9d28f61b"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[12 nationalité : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="259" width="240" height="22" uuid="4fc7405d-f208-447f-918a-88d54dfbceba"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{mere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="259" width="130" height="22" uuid="e9686fd8-62ea-43b1-a90d-ff0574366610"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[13 et pour mère : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="281" width="240" height="21" uuid="814e15d5-a012-42e8-bd96-1c319dcae1fb"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{datenaissmere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="281" width="130" height="21" uuid="4083c2d6-d76a-4dda-97d3-357dc90696a5"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[14 née : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="302" width="240" height="21" uuid="61a898ba-ba82-44c1-99e0-3011a60c5ac1"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{villmere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="302" width="130" height="21" uuid="235e0863-6908-4d7e-a30e-0c06cc9cf4fc"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[15 à : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="323" width="240" height="21" uuid="cd264ddc-404a-4bd0-9492-ebf9c7171b8b"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{profmere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="323" width="130" height="21" uuid="72da7b4b-5e64-4fc9-8e4d-1ba7aee5bbea"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[16 profession : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="344" width="240" height="21" uuid="0b676020-e709-40b9-8cf8-f98095bcdfe2"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{domicilemere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="344" width="130" height="21" uuid="970d9747-03ab-4bc7-8b2b-376ce2fc3209"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[17 domiciliée à : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="365" width="240" height="21" uuid="4a699ad8-7b46-4383-9c19-8e29a12ed4df"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{natmere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="365" width="130" height="21" uuid="357e2424-530e-4e5e-8ab7-61e9c7314816"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[18 nationalité : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="386" width="385" height="21" uuid="ac217eff-20e8-4436-ae1e-430e0084efb7"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{declarationde}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="386" width="130" height="21" uuid="8ce7cde1-6fff-4b9a-8015-dd4f9a6fb143"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[19 sur la déclaration de : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="409" width="240" height="21" uuid="e424a661-a4c1-416d-9deb-347a01836d12"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{langue}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="409" width="130" height="21" uuid="59ee53f6-bda5-4623-afc6-7c5a9a07ef64"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[20 reçue en langue : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="160" y="430" width="385" height="21" uuid="c3cb4d02-3cdb-47dc-8194-8f85f6f0fd07"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{assistancede}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="30" y="430" width="130" height="21" uuid="5bf4a4a1-031d-4c2e-9696-5c6e4486bd6d"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[21 avec l'assistance de : ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="160" y="451" width="385" height="20" uuid="93c91759-4498-4a68-8130-d85accb49de5"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[interprète, ayant prêté devant nous le serment prévu par la loi.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="30" y="471" width="130" height="21" uuid="62ffc5eb-6c7b-497e-acb9-498e649ea59f"/>
+                <textElement textAlignment="Left" verticalAlignment="Bottom">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[22 par nous ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="160" y="471" width="390" height="49" uuid="8ef1a49c-c7b2-4c1a-897f-0933dee5c89b"/>
+                <textElement verticalAlignment="Bottom">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[.................................................................................................................................................................................................................................................  après que le déclarant ait été averti des peines sanctionnant les fausses déclarations.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="30" y="520" width="260" height="21" uuid="2f1fd8b5-75ad-46c9-91ef-1007b72105ce"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[23 lecture faite et déclarant invité à lire l'acte ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="30" y="541" width="260" height="21" uuid="b6530a7d-6779-42ad-9672-75bd4d128582"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[24 l'acte ayant été traduit par l'interprète. ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="30" y="562" width="520" height="28" uuid="1a0184ff-d735-4fc9-875f-a82bf6f99c42"/>
+                <textElement textAlignment="Left" verticalAlignment="Top">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[25 Nous avons signé ..............................................................................................................................................]]></text>
+            </staticText>
+            <rectangle>
+                <reportElement x="2" y="620" width="548" height="70" uuid="e8e2e97f-2f13-4754-bbdf-77a792ce4fb3"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="9" y="625" width="150" height="25" uuid="bb469251-6df9-4638-81ac-d3c3d9cd3eb5"/>
+                <textElement textAlignment="Center">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[DE L'AUTEUR DE L'ACTE]]></text>
+            </staticText>
+            <line>
+                <reportElement x="174" y="629" width="1" height="60" uuid="c4332483-b4ef-4def-8552-46dea5562d68"/>
+            </line>
+            <staticText>
+                <reportElement x="190" y="625" width="150" height="25" uuid="e16efdf8-ab8a-449a-91a4-64d66155b2e1"/>
+                <textElement textAlignment="Center">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[DU DECLARANT]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="377" y="625" width="150" height="25" uuid="fcecf966-3199-42a0-bc1a-07d3c8dcfe51"/>
+                <textElement textAlignment="Center">
+                    <font size="12" isBold="true"/>
+                </textElement>
+                <text><![CDATA[DE L'INTERPRETE]]></text>
+            </staticText>
+            <line>
+                <reportElement x="360" y="629" width="1" height="60" uuid="27087de3-70bb-4fc6-becc-5632521c1117"/>
+            </line>
+            <textField>
+                <reportElement x="160" y="91" width="310" height="20" uuid="1b26f59e-c77d-4361-a47b-9de0790b7b60"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{bebe}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="160" y="30" width="384" height="20" uuid="31638f08-2e0c-4a0b-b5a5-c69a57508424"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{ville}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>

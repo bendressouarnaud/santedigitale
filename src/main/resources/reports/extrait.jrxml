@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="extrait_nouveau" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="92fe7bd5-f1b5-44ef-a552-827a45bf5c53">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="materniteAdapter "/>
+    <parameter name="annee" class="java.lang.String"/>
+    <parameter name="dateactuelle" class="java.lang.String"/>
+    <parameter name="numregistre" class="java.lang.String"/>
+    <parameter name="jourlettre" class="java.lang.String"/>
+    <parameter name="moislettre" class="java.lang.String"/>
+    <parameter name="anneelettre" class="java.lang.String"/>
+    <parameter name="heurelettre" class="java.lang.String"/>
+    <parameter name="minutelettre" class="java.lang.String"/>
+    <parameter name="datelivraison" class="java.lang.String"/>
+    <parameter name="repertoireimage" class="java.lang.String"/>
+    <parameter name="iddec" class="java.lang.Integer"/>
+    <queryString language="SQL">
+        <![CDATA[SELECT concat(d.nombebe,' ',d.prenbebe) as enfant,
+d.pere,
+d.mere,
+d.nombebe,
+d.prenbebe,
+b.libelle as maternite
+FROM
+anf_commune a inner join anf_hopital b on a.idcom=b.idcom inner join anf_users c
+on b.idhop=c.idhop inner join anf_declaration d on c.idusr=d.idusr
+where d.iddec=$P{iddec}]]>
+    </queryString>
+    <field name="enfant" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="enfant"/>
+    </field>
+    <field name="pere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="pere"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="mere" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="mere"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="nombebe" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="nombebe"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="prenbebe" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="prenbebe"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_declaration"/>
+    </field>
+    <field name="maternite" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="maternite"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_hopital"/>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <detail>
+        <band height="801" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="10" width="160" height="20" uuid="0556dcb5-22ce-4ef4-8a5d-e96bd0ec37f4"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[REPUBLIQUE DE COTE D'IVOIRE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="30" width="160" height="20" uuid="fd429f25-5360-4125-9baf-2b9897c23327"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[REGION DES LAGUNES]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="50" width="160" height="20" uuid="9dfc7d87-5831-4642-96d4-a6451300aca0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[DEPARTEMENT DE DABOU]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="70" width="160" height="20" uuid="829b84a0-64dc-4648-9647-4121768650e1"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[COMMUNE DE DABOU]]></text>
+            </staticText>
+            <rectangle radius="10">
+                <reportElement x="290" y="10" width="263" height="90" uuid="6cb681ab-7097-49f9-94c8-78e484beb56a"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="340" y="16" width="162" height="24" uuid="4a4cae93-aba9-41f9-8a32-44f255d018ed"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Times New Roman" size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[E X T R A I T]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="300" y="44" width="244" height="26" uuid="24d6eefb-cb9b-4fae-8405-d916fa9095dd"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Times New Roman" size="13"/>
+                </textElement>
+                <text><![CDATA[du Registre des Actes de l'Etat Civil]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="336" y="72" width="104" height="26" uuid="560c4a3f-c8ec-4391-9a10-5426ca226c24"/>
+                <textElement>
+                    <font fontName="Times New Roman" size="14"/>
+                </textElement>
+                <text><![CDATA[Pour l'année ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="440" y="72" width="70" height="26" uuid="6df6c9cc-2294-4dc6-a16c-c173d19a7712"/>
+                <textElement>
+                    <font fontName="Times New Roman" size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{annee}]]></textFieldExpression>
+            </textField>
+            <image>
+                <reportElement x="40" y="100" width="90" height="80" uuid="cce0798f-73fc-46b6-be4f-ca739cd5981a"/>
+                <imageExpression><![CDATA[$P{repertoireimage}]]></imageExpression>
+            </image>
+            <staticText>
+                <reportElement x="0" y="190" width="162" height="24" uuid="726ce4e4-62dd-4fbd-b8da-a04ec0bfc1b9"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Times New Roman" size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[ETAT CIVIL]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="214" width="162" height="40" uuid="6b527f83-c443-4ffc-9808-e8453fa6409c"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[CIRCONSCRIPTION D'ETAT CIVIL DE LA COMMUNE DE DABOU]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="254" width="162" height="26" uuid="86bb65a7-fce2-464e-bbf2-405a04f0f791"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" isBold="true"/>
+                </textElement>
+                <text><![CDATA[CENTRE DE DABOU-COMMUNE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="285" width="20" height="20" uuid="5bf163d4-8b25-4690-9d35-8c916b262781"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[N°]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="20" y="285" width="180" height="20" uuid="bc8cc61b-3adb-42d0-995f-7db5c808740b"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{numregistre}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="30" y="310" width="140" height="1" uuid="28568b83-affb-46be-bcfe-41032f4be6fc"/>
+            </line>
+            <staticText>
+                <reportElement x="19" y="317" width="162" height="20" uuid="1a45a472-7110-4371-8c30-5b6978a776d7"/>
+                <textElement textAlignment="Center" verticalAlignment="Top">
+                    <font fontName="Times New Roman" size="14"/>
+                </textElement>
+                <text><![CDATA[NAISSANCE DE]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="10" y="340" width="210" height="20" uuid="87c8a93f-82dc-46cd-8dab-ee42f808e281"/>
+                <textElement>
+                    <font fontName="Times New Roman" size="14" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{nombebe}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="360" width="290" height="20" uuid="f5c4d465-f25c-4d46-a33a-34f332aeae13"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{prenbebe}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="223" y="120" width="17" height="20" uuid="fcfb0d42-b790-413a-92d7-617534ae4bb8"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="11"/>
+                </textElement>
+                <text><![CDATA[Le]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="240" y="120" width="70" height="20" uuid="6531e4ab-ee2a-4163-ba7f-06dd9cfa2bbc"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{jourlettre}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="310" y="120" width="70" height="20" uuid="ae4561d5-5b27-46fd-a43e-240cdb92cc16"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{moislettre}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="380" y="120" width="173" height="20" uuid="61229993-8169-4e54-9005-4f08e2c61afa"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{anneelettre}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="223" y="144" width="47" height="20" uuid="2aef9916-f4d5-4419-a244-01f45880a87a"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[est né(e) ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="270" y="144" width="283" height="20" uuid="8aa42713-f142-4f6a-9f35-f1daf9450166"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="11" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{enfant}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="223" y="168" width="17" height="20" uuid="f2271eb9-b452-4dc0-81e6-13c83d8c62ad"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[à]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="240" y="168" width="313" height="20" uuid="8b388def-0b27-47b5-bd1e-9f469d849bdc"/>
+                <textElement verticalAlignment="Middle">
+                    <font isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{maternite}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="223" y="190" width="17" height="20" uuid="af850930-02b9-43ee-8f01-767198748af9"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[à]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="240" y="190" width="78" height="20" uuid="264e17d7-08bb-457c-ad62-6f781b6041ed"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{heurelettre}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="320" y="190" width="50" height="20" uuid="df14cd6d-ddc8-4212-9937-9422aa6cfd50"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Heure (s)]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="370" y="190" width="120" height="20" uuid="cf974ae0-ef8d-4abb-bdba-66af11f704e6"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{minutelettre}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="490" y="190" width="63" height="20" uuid="dbfe610c-5ba4-4168-bb18-7490571620b2"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Minute (s)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="223" y="212" width="47" height="20" uuid="9928ffc0-7cff-4601-8f3d-c19fe595e28f"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[FILS de ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="270" y="212" width="283" height="20" uuid="5ee7918f-a1df-4893-8d62-e223ee633c60"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="11" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{pere}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="223" y="234" width="47" height="20" uuid="8e3cb45b-9349-4abf-9693-fd2a7ddd0eca"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[et de ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="270" y="234" width="283" height="20" uuid="f5cef99d-0c44-4233-90da-4f4683a04a69"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="11" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{mere}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="10" y="410" width="535" height="1" uuid="14c4387d-cff0-468b-8f3c-4d53dfbe57f3"/>
+            </line>
+            <staticText>
+                <reportElement x="90" y="430" width="162" height="24" uuid="02748379-2cc3-4156-aa50-0afc53ba4921"/>
+                <textElement textAlignment="Right">
+                    <font fontName="Times New Roman" size="18" isBold="true" isUnderline="true"/>
+                </textElement>
+                <text><![CDATA[M E N T I O N S ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="260" y="430" width="270" height="24" uuid="e6e020d7-b220-4d3f-ae0f-1a768e1522f0"/>
+                <textElement textAlignment="Left" verticalAlignment="Top">
+                    <font fontName="Times New Roman" size="18" isBold="false"/>
+                </textElement>
+                <text><![CDATA[ (éventuellement)   NEANT]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="470" width="543" height="20" uuid="df85b998-95d7-4c59-82ef-ba2c065d6999"/>
+                <textElement verticalAlignment="Bottom"/>
+                <text><![CDATA[Marié(e) le...............................................................................................................................................................................]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="490" width="534" height="16" uuid="bab64ec8-7e5a-4df2-ae89-1676b3636611"/>
+                <text><![CDATA[Avec.........................................................................................................................................................................................]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="510" width="534" height="30" uuid="bd51071c-a1a2-46bd-a598-b3f62c2776ee"/>
+                <text><![CDATA[Mariage dissout par décision de divorce en date du.............................................................................................................. ...............................................................................................................................................................................................]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="540" width="534" height="16" uuid="7e2a12b8-9c0f-46f7-950f-99c6a1cdf674"/>
+                <text><![CDATA[Décédé(e) le...........................................................................................................................................................................]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="10" y="568" width="534" height="16" uuid="b79193c8-baea-4ad1-9bd4-6bf186838f92"/>
+                <textElement>
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Certifié le présent extrait conforme aux indications portées au registre.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="295" y="600" width="90" height="16" uuid="4b1921a5-f205-4230-acfb-890a64fc4d21"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Délivré à Dabou, ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="385" y="600" width="160" height="16" uuid="5fb84c7f-3ecd-4022-8084-40d464521bb5"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{datelivraison}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="336" y="640" width="208" height="16" uuid="270bfede-3a7f-4e5f-b434-3079900e330f"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[L'officier de l'Etat Civil]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="420" y="656" width="125" height="16" uuid="e818f860-3901-4e8b-9932-5a51065162c7"/>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[(Signature)]]></text>
+            </staticText>
+        </band>
+    </detail>
+</jasperReport>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ordonnancecmc" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2f4ba848-e8dc-4eba-89e8-49c01caaeeb7">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+        <box>
+            <pen lineWidth="0.5" lineColor="#000000"/>
+            <topPen lineWidth="0.5" lineColor="#000000"/>
+            <leftPen lineWidth="0.5" lineColor="#000000"/>
+            <bottomPen lineWidth="0.5" lineColor="#000000"/>
+            <rightPen lineWidth="0.5" lineColor="#000000"/>
+        </box>
+    </style>
+    <subDataset name="datasetmedicament" uuid="fdbb2a4b-63ca-4a71-a9dc-d109b12104ff">
+        <queryString>
+            <![CDATA[]]>
+        </queryString>
+        <field name="num" class="java.lang.String"/>
+        <field name="medicament" class="java.lang.String"/>
+        <field name="quantite" class="java.lang.String"/>
+        <field name="dosage" class="java.lang.String"/>
+        <field name="posologie" class="java.lang.String"/>
+        <field name="types" class="java.lang.String"/>
+    </subDataset>
+    <parameter name="dates" class="java.lang.String"/>
+    <parameter name="nompatient" class="java.lang.String"/>
+    <parameter name="itemdatasource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+    <parameter name="iconerepublic" class="java.lang.String"/>
+    <parameter name="iconeclinic" class="java.lang.String"/>
+    <parameter name="rdv" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="266" splitType="Stretch">
+            <staticText>
+                <reportElement positionType="Float" x="-11" y="4" width="211" height="20" uuid="e0c312ed-37a5-4bc2-ad50-9eab606664c7"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[CABINET MEDICO-CHIRURGICAL]]></text>
+            </staticText>
+            <staticText>
+                <reportElement positionType="Float" x="-11" y="24" width="211" height="20" uuid="11eee1bd-c6ee-420d-b6cf-179f4ff525f4"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[SAINTE HENRIETTE DE BONOUA]]></text>
+            </staticText>
+            <staticText>
+                <reportElement positionType="Float" x="-10" y="44" width="211" height="20" uuid="15a84808-9a5f-4390-9e82-4112a29bbcb6"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Quartier résidentiel]]></text>
+            </staticText>
+            <staticText>
+                <reportElement positionType="Float" x="-10" y="64" width="270" height="20" uuid="d990c953-7c70-4b32-bb05-edfcfee5dd49"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[(3ème carrefour à gauche Route Kodjoboué)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement positionType="Float" x="-10" y="84" width="330" height="20" uuid="90c4ee1e-9e6b-403e-a3c9-80c8bcc6a715"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[BP 193 Bonoua / Tél : 21-30-07-68 / Fax : 21-30-96-91]]></text>
+            </staticText>
+            <staticText>
+                <reportElement positionType="Float" x="-10" y="104" width="290" height="20" uuid="f7cd17e9-14b1-4ed6-b962-2ed38160052d"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Cel : 71-32-13-43]]></text>
+            </staticText>
+            <staticText>
+                <reportElement positionType="Float" x="350" y="4" width="221" height="20" uuid="dd5013e8-3005-4f9e-b0a2-2d7c7d75d656"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[REPUBLIQUE DE COTE D'IVOIRE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement positionType="Float" x="350" y="24" width="221" height="20" uuid="f9d8830f-cb61-40ee-861d-a0a561132cd2"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[Union - Discipline - Travail]]></text>
+            </staticText>
+            <image scaleImage="FillFrame">
+                <reportElement x="427" y="48" width="70" height="60" uuid="3ec4f919-300d-421b-ba81-9d9e230c0f62"/>
+                <graphicElement fill="Solid"/>
+                <imageExpression><![CDATA[$P{iconerepublic}]]></imageExpression>
+            </image>
+            <line>
+                <reportElement x="390" y="44" width="140" height="1" uuid="8a3c7360-b7de-40cd-bfdc-fd0ddddf2346"/>
+            </line>
+            <line>
+                <reportElement x="390" y="130" width="140" height="1" uuid="6ac6c741-d232-45ad-8fe2-f243bcb2a376"/>
+            </line>
+            <staticText>
+                <reportElement positionType="Float" x="350" y="108" width="221" height="20" uuid="276ae1a7-18a2-4713-9d00-c6227ea61c8d"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[MINISTERE DE LA SANTE PUBLIQUE]]></text>
+            </staticText>
+            <image scaleImage="FillFrame">
+                <reportElement x="30" y="130" width="50" height="60" uuid="0c4df2bf-0eb5-4628-9ba6-eb9b4bb77a09"/>
+                <graphicElement fill="Solid"/>
+                <imageExpression><![CDATA[$P{iconeclinic}]]></imageExpression>
+            </image>
+            <textField>
+                <reportElement x="350" y="168" width="221" height="20" uuid="b78eda2b-1401-4758-91df-b3a2724d327f"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{dates}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement positionType="FixRelativeToBottom" x="112" y="228" width="330" height="30" uuid="8c52f9b1-213b-43bf-8020-bd019b57c42c"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="20" isBold="true" isUnderline="true"/>
+                </textElement>
+                <text><![CDATA[ORDONNANCE MEDICALE]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="144" width="110" height="36" uuid="18932ddc-93f7-4541-bf37-523015f6b4c7"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="22" isBold="true"/>
+                </textElement>
+                <text><![CDATA[CMC]]></text>
+            </staticText>
+        </band>
+    </title>
+    <detail>
+        <band height="245" splitType="Stretch">
+            <textField>
+                <reportElement x="-10" y="7" width="581" height="23" uuid="b208a89a-b842-4b93-90d6-f894f2e9d300"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{nompatient}]]></textFieldExpression>
+            </textField>
+            <componentElement>
+                <reportElement x="0" y="40" width="555" height="160" uuid="52de48f1-f1bf-414d-a3d0-abb1a86b6cf7">
+                    <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+                    <property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+                </reportElement>
+                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+                    <datasetRun subDataset="datasetmedicament" uuid="4a1fb4e8-5b74-4e37-a499-9e4289aa0ed2">
+                        <dataSourceExpression><![CDATA[$P{itemdatasource}]]></dataSourceExpression>
+                    </datasetRun>
+                    <jr:column width="40" uuid="c1485c1e-6863-471b-a305-74cfc0784d30">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne1"/>
+                        <jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement x="0" y="0" width="40" height="30" uuid="b4ec47d7-63ec-44d1-94b8-6c3d4f677afd"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Num.]]></text>
+                            </staticText>
+                        </jr:tableHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="40" height="30" uuid="5147a45a-5c86-4760-be32-34d355b36f36"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{num}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="200" uuid="a7d9822f-4424-4afc-a93a-8bd318d2d26e">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne2"/>
+                        <jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement x="0" y="0" width="200" height="30" uuid="aaad8c44-450d-4b5b-9259-854c77c8b059"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Médicament]]></text>
+                            </staticText>
+                        </jr:tableHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="200" height="30" uuid="19c14365-df28-4849-8801-54e8bc03a49f"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{medicament}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="40" uuid="a5b61c05-adeb-4f5d-b647-df61b9dbb7f3">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne3"/>
+                        <jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement x="0" y="0" width="40" height="30" uuid="2e9c3a4a-2312-4e78-88b2-c4d2b9439c29"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Dosage]]></text>
+                            </staticText>
+                        </jr:tableHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="40" height="30" uuid="e76ab9af-2d16-4113-bf0d-73578c7381d9"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{dosage}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="70" uuid="31b2d943-59c4-47b9-a2fc-1935c55aad3c">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne4"/>
+                        <jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement x="0" y="0" width="70" height="30" uuid="30ed7d97-b17e-474e-8c4b-be01a45254c7"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Type]]></text>
+                            </staticText>
+                        </jr:tableHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="70" height="30" uuid="a0078c01-960f-4dec-9613-5c8ec4f54a6f"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{types}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="50" uuid="12550883-1294-4342-a2f4-07f00672f20f">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne5"/>
+                        <jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement x="0" y="0" width="50" height="30" uuid="f1734170-926a-480d-b777-2085c740faa8"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Posologie]]></text>
+                            </staticText>
+                        </jr:tableHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="50" height="30" uuid="ac022fa5-7881-4580-bf90-150932cef0fb"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{posologie}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                    <jr:column width="70" uuid="567c849f-7db1-4314-8f5c-76060ca99792">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne6"/>
+                        <jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement x="0" y="0" width="70" height="30" uuid="d183984f-a304-4918-b227-5f006acad86a"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Durée]]></text>
+                            </staticText>
+                        </jr:tableHeader>
+                        <jr:detailCell style="Table_TD" height="30"/>
+                    </jr:column>
+                    <jr:column width="80" uuid="b2e9f59c-088e-469b-a2b5-bb44543a777c">
+                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Colonne7"/>
+                        <jr:tableHeader style="Table_TH" height="30" rowSpan="1">
+                            <staticText>
+                                <reportElement x="0" y="0" width="80" height="30" uuid="8f9c61d6-b74a-4888-939b-8b4cb98ab587"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <text><![CDATA[Quantité]]></text>
+                            </staticText>
+                        </jr:tableHeader>
+                        <jr:detailCell style="Table_TD" height="30">
+                            <textField>
+                                <reportElement x="0" y="0" width="80" height="30" uuid="673ce1ba-f0ec-41ea-9195-e676f322b4f4"/>
+                                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                                <textFieldExpression><![CDATA[$F{quantite}]]></textFieldExpression>
+                            </textField>
+                        </jr:detailCell>
+                    </jr:column>
+                </jr:table>
+            </componentElement>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="72" splitType="Stretch">
+            <staticText>
+                <reportElement x="-11" y="5" width="41" height="20" uuid="0d3dd7d2-bab4-464f-bf09-6489937ee7a1"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <text><![CDATA[RDV : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="30" y="5" width="270" height="20" uuid="003b0108-242b-42b4-a283-8a0ed2c8a1e6"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{rdv}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="12" y="35" width="530" height="1" uuid="2b5d289b-255c-48ab-9f88-a1239a436caf"/>
+            </line>
+            <staticText>
+                <reportElement x="27" y="40" width="500" height="20" uuid="1cbefa7c-c6cc-499d-b48f-031c20c1b9cf"/>
+                <textElement textAlignment="Center">
+                    <font size="11" isBold="true"/>
+                </textElement>
+                <text><![CDATA[PRIERE RAPPORTER LA PRÉSENTE ORDONNANCE À LA PROCHAINE CONSULTATION]]></text>
+            </staticText>
+        </band>
+    </columnFooter>
+</jasperReport>

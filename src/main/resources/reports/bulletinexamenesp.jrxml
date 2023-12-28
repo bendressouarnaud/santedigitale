@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bulletinexamen" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="69183573-3e08-46b0-b421-c419256913d6">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="icone" class="java.lang.String"/>
+    <parameter name="dates" class="java.lang.String"/>
+    <parameter name="nom" class="java.lang.String"/>
+    <parameter name="prenom" class="java.lang.String"/>
+    <parameter name="assurance" class="java.lang.String"/>
+    <parameter name="age" class="java.lang.String"/>
+    <parameter name="sexe" class="java.lang.String"/>
+    <parameter name="examen1" class="java.lang.String"/>
+    <parameter name="examen2" class="java.lang.String"/>
+    <parameter name="examen3" class="java.lang.String"/>
+    <parameter name="examen4" class="java.lang.String"/>
+    <parameter name="renseignement1" class="java.lang.String"/>
+    <parameter name="renseignement2" class="java.lang.String"/>
+    <parameter name="renseignement3" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="89" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="3" width="555" height="18" forecolor="#FA0A0A" uuid="87bb90cc-68da-4b10-ba6b-fa531ddcf4da"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Times New Roman" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[CLINIQUE MEDICALE ESPERANCE TOUMODI]]></text>
+            </staticText>
+            <image scaleImage="FillFrame">
+                <reportElement x="10" y="21" width="50" height="50" uuid="56822369-695c-4f6a-9d6e-caddd9fa5f28"/>
+                <imageExpression><![CDATA[$P{icone}]]></imageExpression>
+            </image>
+            <staticText>
+                <reportElement x="60" y="21" width="495" height="12" uuid="8202f2b5-346d-4bbb-9289-31f5deb825df"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <text><![CDATA[Médecine Générale – Pédiatrie – Chirurgie – Gynéco-Obstétrique – Ophtalmologie – Accouchement]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="60" y="33" width="495" height="12" uuid="a0dcb634-a0a1-4284-80d5-ee10f32d3408"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <text><![CDATA[Réanimation-Soins Infirmiers et Obstétricaux-Hospitalisation-ECG-Imagerie-Echographie-Laboratoire-Urgences 24h/24]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="60" y="45" width="495" height="12" uuid="5669e584-3dd2-4988-ad6d-49fc948398d1"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <text><![CDATA[BP 253 Toumodi – Tel : (225) 30 62 90 39 – Fax : (225) 30 62 93 70 (Côte d’Ivoire)]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="60" y="57" width="495" height="12" uuid="5d2fc2a2-5a44-41c0-b710-f2292ec3bef0"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="8"/>
+                </textElement>
+                <text><![CDATA[Cell : 40 68 20 66 / 05 05 80 40 / 07 84 02 20 - Email : cliniquesperancetdi@gmail.com]]></text>
+            </staticText>
+            <line>
+                <reportElement x="10" y="74" width="534" height="1" forecolor="#FF0905" uuid="0117f7a8-47f5-48d8-ab0c-c8284bf10689"/>
+            </line>
+            <line>
+                <reportElement x="10" y="78" width="534" height="1" uuid="4d22ab9e-02bf-4bc1-8943-5f311b8604d2"/>
+                <graphicElement>
+                    <pen lineWidth="4.0" lineColor="#0339FF"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="10" y="82" width="534" height="1" forecolor="#FF0400" uuid="1fd8ccbf-95ca-4e23-b7c2-660c7f91763f"/>
+            </line>
+        </band>
+    </title>
+    <detail>
+        <band height="587" splitType="Stretch">
+            <textField>
+                <reportElement x="472" y="4" width="80" height="14" uuid="82f90668-6be1-4fad-a7be-47205ff01abe"/>
+                <textElement textAlignment="Left" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{dates}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="173" y="21" width="208" height="16" uuid="c2cd1e81-fc9f-4437-8fbb-f4763c61096e"/>
+                <textElement textAlignment="Center">
+                    <font size="12" isUnderline="true"/>
+                </textElement>
+                <text><![CDATA[BULLETIN D'EXAMENS]]></text>
+            </staticText>
+            <line>
+                <reportElement x="294" y="50" width="1" height="180" uuid="3ad5de83-9a54-4a2e-a630-18c38cbcf4aa"/>
+            </line>
+            <staticText>
+                <reportElement x="10" y="50" width="74" height="14" uuid="426325cf-a3d7-49a2-99f0-d7b72b4693f9"/>
+                <textElement>
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Nom-prénoms : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="85" y="50" width="204" height="14" uuid="b6076596-1acd-484b-a535-fa2f55543586"/>
+                <textFieldExpression><![CDATA[$P{nom}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="64" width="278" height="14" uuid="8f6dfdb4-b595-40d6-aa71-1428771fff62"/>
+                <textFieldExpression><![CDATA[$P{prenom}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="10" y="82" width="74" height="14" uuid="e5113f82-4e05-450c-94b8-95122b46e545"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Assurance : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="84" y="82" width="204" height="14" uuid="5afd732b-b52c-4077-925c-20fa2859e69c"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{assurance}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="10" y="96" width="30" height="14" uuid="796e98c3-80a2-4722-864f-ee10d6b0895f"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Âge : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="40" y="96" width="60" height="14" uuid="da906999-f28b-4d4c-9ac4-89563ee340bb"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{age}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="148" y="96" width="42" height="14" uuid="3c5645a9-cd03-4fe2-bda7-ba683fc20f3b"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Sexe : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="192" y="96" width="60" height="14" uuid="65234d4b-b370-4f70-9ad9-62936c6bdbbd"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{sexe}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="10" y="114" width="110" height="14" uuid="2dac7bc6-8693-4cbe-bdd7-709375b43f9e"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Times New Roman" isUnderline="true"/>
+                </textElement>
+                <text><![CDATA[Examens demandés : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="10" y="128" width="278" height="14" uuid="219a10fc-d7cc-439c-bb19-908fddd43ea8"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{examen1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="142" width="278" height="14" uuid="518bb35d-8d62-4c76-bbc2-d881c1848044"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{examen2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="156" width="278" height="14" uuid="2f27eac5-b7b1-4e94-a442-9503a9e858e0"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{examen3}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="10" y="174" width="138" height="14" uuid="137c0c71-71c4-40ac-9aea-37b1ae97c79c"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Times New Roman" isUnderline="true"/>
+                </textElement>
+                <text><![CDATA[Renseignements cliniques : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="10" y="188" width="278" height="14" uuid="78e82df9-b2a1-4e55-bc2a-15b287582036"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{renseignement1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="202" width="278" height="14" uuid="7404b6e0-b697-4484-a265-70b429ff4487"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{renseignement2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="10" y="216" width="278" height="14" uuid="f09516a9-2696-4c2c-9c89-ee749a3e2352"/>
+                <textElement verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA[$P{renseignement3}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="407" y="4" width="65" height="14" uuid="078422aa-70e1-4914-9570-fad40bfd7ae2"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman"/>
+                </textElement>
+                <text><![CDATA[Toumodi, le : ]]></text>
+            </staticText>
+        </band>
+    </detail>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>

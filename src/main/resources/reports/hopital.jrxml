@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Maternite" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ab2aa578-a188-4e01-a1c1-7233968243c3">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="materniteAdapter "/>
+    <queryString language="SQL">
+        <![CDATA[select * from anf_hopital]]>
+    </queryString>
+    <field name="idhop" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.label" value="idhop"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_hopital"/>
+    </field>
+    <field name="libelle" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="libelle"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_hopital"/>
+    </field>
+    <field name="idcom" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="idcom"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_hopital"/>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement x="210" y="20" width="100" height="30" uuid="32598f1b-7aec-43c9-a549-1f020acccefd"/>
+                <textElement textAlignment="Center">
+                    <font size="22"/>
+                </textElement>
+                <text><![CDATA[TITRE]]></text>
+            </staticText>
+        </band>
+    </title>
+    <detail>
+        <band height="125" splitType="Stretch">
+            <textField>
+                <reportElement x="20" y="30" width="100" height="20" uuid="c0c4a610-f8b1-440a-b696-5086b88d0ab4"/>
+                <textElement textAlignment="Center"/>
+                <textFieldExpression><![CDATA[$F{idhop}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="20" y="10" width="100" height="20" uuid="5442a9b4-4cfd-4bb2-9fe0-fc4ec4b1a10e"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <text><![CDATA[Identifiant]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="120" y="30" width="220" height="20" uuid="f440bb45-82e4-4634-be0d-4091b86aad4a"/>
+                <textFieldExpression><![CDATA[$F{libelle}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="120" y="10" width="220" height="20" uuid="70d36a23-252d-42ab-99a7-143d138188e2"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Dénomination]]></text>
+            </staticText>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>

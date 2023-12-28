@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="qrcode" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8a846829-bd70-40c1-9a2f-b8d3682cf36f">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="illustration" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <variable name="VLogos" class="java.lang.String">
+        <variableExpression><![CDATA[$P{illustration}]]></variableExpression>
+    </variable>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="58" splitType="Stretch">
+            <staticText>
+                <reportElement x="170" y="13" width="200" height="30" uuid="c1efd03e-2648-48af-a7aa-18792b62785a"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="16" isBold="true" isUnderline="true"/>
+                </textElement>
+                <text><![CDATA[PATIENT]]></text>
+            </staticText>
+        </band>
+    </title>
+    <detail>
+        <band height="197" splitType="Stretch">
+            <image scaleImage="FillFrame">
+                <reportElement positionType="FixRelativeToBottom" x="290" y="40" width="90" height="84" uuid="343cc3ba-0591-47cf-aa48-d59b982cb979"/>
+                <imageExpression><![CDATA[new java.io.ByteArrayInputStream(org.apache.commons.codec.binary.Base64.decodeBase64($V{VLogos}.getBytes()))]]></imageExpression>
+            </image>
+            <staticText>
+                <reportElement x="182" y="67" width="100" height="30" uuid="91f35845-cc53-4923-acf8-3be7a85d98cf"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="14"/>
+                </textElement>
+                <text><![CDATA[Qr Code : ]]></text>
+            </staticText>
+        </band>
+    </detail>
+</jasperReport>

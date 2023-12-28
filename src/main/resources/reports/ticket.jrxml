@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ticket" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="35c6e915-3f37-4404-b4cd-1695fe4ac5dc">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="materniteAdapter "/>
+    <parameter name="numticket" class="java.lang.String"/>
+    <queryString language="SQL">
+        <![CDATA[select d.libelle as taxe, date(b.dates) as dte, b.heure,c.nom, c.contact,b.montant
+from anf_vendeuse a inner join anf_paiement b on a.idven=b.idven inner join anf_agent c on  b.idage=c.idage inner join
+anf_taxe d on b.idtaxe=d.idtaxe
+where idpaie=$P{numticket}]]>
+    </queryString>
+    <field name="taxe" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="taxe"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_taxe"/>
+    </field>
+    <field name="dte" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="dte"/>
+    </field>
+    <field name="heure" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="heure"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_paiement"/>
+    </field>
+    <field name="nom" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="nom"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_agent"/>
+    </field>
+    <field name="contact" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.label" value="contact"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_agent"/>
+    </field>
+    <field name="montant" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.label" value="montant"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="anf_paiement"/>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="63" splitType="Stretch">
+            <staticText>
+                <reportElement x="180" y="11" width="130" height="30" uuid="76db7506-7fba-4458-976c-0d9e625fc3ad"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="16"/>
+                </textElement>
+                <text><![CDATA[ Numéro Ticket :]]></text>
+            </staticText>
+            <line>
+                <reportElement x="40" y="50" width="504" height="1" uuid="5a0de2bf-d386-4108-a2c1-5f75ed356e46"/>
+            </line>
+            <textField>
+                <reportElement x="310" y="11" width="120" height="31" uuid="1b5c440e-78b4-48cc-9101-ddb91375bf8f"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="16"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{numticket}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <detail>
+        <band height="162" splitType="Stretch">
+            <textField>
+                <reportElement x="194" y="10" width="360" height="20" uuid="466667a3-0fe1-4270-833e-a6c24a56673f"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{taxe}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="0" y="10" width="190" height="20" uuid="f3dd3704-9bd4-411e-b0c8-bae996a988ec"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[Taxe : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="194" y="30" width="230" height="20" uuid="e60fb04d-e091-4aed-8678-169ac70ca7d7"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{dte}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="0" y="30" width="190" height="20" uuid="8cc77d13-045e-4799-9b42-074b68f8f396"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[Date de la transaction : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="194" y="50" width="230" height="20" uuid="425786f0-e43c-4cdd-b9e1-fc25a4c32461"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{heure}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="0" y="50" width="190" height="20" uuid="68f67561-3ef2-4206-b859-7692c7605ddd"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[Heure de la transaction : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="194" y="70" width="360" height="20" uuid="c0a17438-fcab-47d9-b0aa-93f7182e456d"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="0" y="70" width="190" height="20" uuid="141625c1-ea9b-4f93-9a3a-d76ee170d22a"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[Nom de l'agent : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="194" y="90" width="230" height="20" uuid="e1f07252-92f6-4dc7-b2fc-c67cc9b3da8f"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{contact}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="0" y="90" width="190" height="20" uuid="67e7930c-3f53-49e5-adb3-b12a445e5c1d"/>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[Contact agent : ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="194" y="120" width="86" height="20" uuid="f6ec53e1-6c9f-4dbc-b87d-b609b5d59c09"/>
+                <textElement>
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{montant}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="90" y="120" width="100" height="20" uuid="5c7f73bb-04f7-4484-8969-3258fa801118"/>
+                <textElement textAlignment="Right">
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[Montant : ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="280" y="120" width="100" height="20" uuid="3c78ad9c-2e93-4666-bbdf-c0986ab500ac"/>
+                <textElement>
+                    <font fontName="Times New Roman" size="12"/>
+                </textElement>
+                <text><![CDATA[FCFA]]></text>
+            </staticText>
+        </band>
+    </detail>
+</jasperReport>

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dossierpatientcmc" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4cbea106-ac66-40d6-a154-0be09e823906">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="imageclinic" class="java.lang.String"/>
+    <parameter name="nom" class="java.lang.String"/>
+    <parameter name="prenom" class="java.lang.String"/>
+    <parameter name="datenaissance" class="java.lang.String"/>
+    <parameter name="nompere" class="java.lang.String"/>
+    <parameter name="residence" class="java.lang.String"/>
+    <parameter name="employeur" class="java.lang.String"/>
+    <parameter name="jeunefille" class="java.lang.String"/>
+    <parameter name="sexe" class="java.lang.String"/>
+    <parameter name="lieunaissance" class="java.lang.String"/>
+    <parameter name="nommere" class="java.lang.String"/>
+    <parameter name="numtelephone" class="java.lang.String"/>
+    <parameter name="localisation" class="java.lang.String"/>
+    <parameter name="assurance" class="java.lang.String"/>
+    <parameter name="assureprincipal" class="java.lang.String"/>
+    <parameter name="matricule" class="java.lang.String"/>
+    <parameter name="couverture" class="java.lang.String"/>
+    <parameter name="clientcomptant" class="java.lang.String"/>
+    <parameter name="nomprenom" class="java.lang.String"/>
+    <parameter name="adressepostale" class="java.lang.String"/>
+    <parameter name="tel" class="java.lang.String"/>
+    <parameter name="cel" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="103" splitType="Stretch">
+            <staticText>
+                <reportElement x="263" y="6" width="50" height="30" uuid="5504c19a-e520-4738-978c-dc039dcb2e58"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="18" isBold="true"/>
+                </textElement>
+                <text><![CDATA[CMC]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="137" y="39" width="280" height="22" uuid="aba7be47-8e81-4ea5-9200-2c16ea24ee22"/>
+                <textElement textAlignment="Center">
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[CABINET MEDICO CHIRURGICAL]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="137" y="61" width="280" height="22" uuid="1504270d-c9ec-4b60-9e97-c177b0725639"/>
+                <textElement textAlignment="Center">
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[SAINTE HENRIETTE DE BONOUA]]></text>
+            </staticText>
+            <line>
+                <reportElement x="4" y="92" width="545" height="1" uuid="67d2e336-e18e-4e62-9230-3623c1f7f67a"/>
+                <graphicElement>
+                    <pen lineWidth="4.0"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="4" y="87" width="545" height="1" uuid="636fe64d-e26f-4285-880c-fd0e914a2897"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <image scaleImage="FillFrame">
+                <reportElement positionType="FixRelativeToBottom" x="220" y="3" width="40" height="36" uuid="0d2285eb-d7bf-403a-9c9a-6e6d7921acfe"/>
+                <imageExpression><![CDATA[$P{imageclinic}]]></imageExpression>
+            </image>
+        </band>
+    </title>
+    <detail>
+        <band height="499" splitType="Stretch">
+            <staticText>
+                <reportElement x="177" y="8" width="200" height="30" uuid="1f658629-d947-43ee-88a5-d1b80d7c7e71"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="18"/>
+                </textElement>
+                <text><![CDATA[DOSSIER PATIENT]]></text>
+            </staticText>
+            <frame>
+                <reportElement x="3" y="50" width="277" height="122" uuid="e0f84281-b24a-4a70-b61e-3853dd11d261"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <staticText>
+                    <reportElement x="4" y="4" width="39" height="19" uuid="f2298c80-a35a-49fc-9145-2c7f38e0d023"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Nom : ]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="4" y="23" width="68" height="19" uuid="38b8f577-afa9-49f3-bb68-0c8894b37605"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Prénom(s) : ]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="4" y="42" width="117" height="19" uuid="ae90b827-f81f-4ebf-bb61-43dfeffcd40b"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Date de naissance : ]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="4" y="61" width="89" height="19" uuid="c8bcd771-22ad-4efd-881a-2a1db7541c12"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Nom Père : ]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="4" y="80" width="129" height="19" uuid="f111a47f-c40d-486a-8847-883879c0798a"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Quartier de résidence : ]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="4" y="99" width="138" height="19" uuid="9b424f63-ef44-4f56-a175-a464bd25702a"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Employeur(Profession) : ]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="43" y="5" width="227" height="18" uuid="699739d8-91ec-4731-8ac2-fdd602b7b866"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{nom}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="142" y="99" width="128" height="19" uuid="daed36c8-59bc-4bda-9465-fd5f59c894e5"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{employeur}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="133" y="80" width="137" height="19" uuid="4a0c6587-ee7b-4c0e-986b-212f92ce4c6c"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{residence}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="93" y="61" width="177" height="19" uuid="d3609494-31af-4cbf-9a4b-b70baf03a4cf"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{nompere}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="121" y="42" width="149" height="19" uuid="170d6899-fda3-46de-bfce-ac6c17da50ed"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{datenaissance}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="72" y="23" width="198" height="19" uuid="060e973d-3d3d-4853-b4ed-1c62a4c5f1cc"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{prenom}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <frame>
+                <reportElement x="280" y="50" width="269" height="122" uuid="4bdf3b9d-f24e-4212-84e8-32684447487e"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <staticText>
+                    <reportElement x="4" y="4" width="106" height="19" uuid="53bec8a6-b3c0-4576-8e4e-9cf0704b01ae"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Nom de jeune fille : ]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="4" y="23" width="46" height="19" uuid="880dee32-a187-4829-ad52-e99e0cc4005e"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Sexe : ]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="4" y="42" width="96" height="19" uuid="dd7204b2-a6d1-4b15-8345-7b42ecd73742"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Lieu naissance : ]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="4" y="61" width="76" height="19" uuid="3b25dfee-c929-42d5-a455-422d7fa5563f"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Nom Mère : ]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="4" y="80" width="89" height="19" uuid="44601610-3ab1-4479-b6a7-bd1700e8bffe"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Numéro de tél : ]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="4" y="99" width="76" height="19" uuid="c0031eaf-3f11-436c-b0ff-6eb3add28f5f"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Localisation : ]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="80" y="99" width="183" height="19" uuid="4844ba8a-2fab-4f6b-b995-8ffeebf7e0ac"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{localisation}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="93" y="81" width="171" height="18" uuid="3db95664-085e-43e4-bb0d-f10370072526"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{numtelephone}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="80" y="62" width="183" height="18" uuid="33250ec3-68e0-4ffb-95c6-1674b6686108"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{nommere}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="100" y="43" width="163" height="18" uuid="0105465b-4b05-49a1-b55a-41b919ecbb53"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{lieunaissance}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="50" y="23" width="213" height="19" uuid="be9cc8ab-92c3-47ab-aeed-836f427dcf90"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{sexe}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="110" y="4" width="154" height="19" uuid="0a6321b4-5b9c-40e1-9625-64ac55deeaf2"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{jeunefille}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <staticText>
+                <reportElement x="177" y="184" width="200" height="30" uuid="d576bad8-6f42-46a9-86dc-be77b1121e04"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="18"/>
+                </textElement>
+                <text><![CDATA[ASSURANCE]]></text>
+            </staticText>
+            <frame>
+                <reportElement stretchType="RelativeToBandHeight" x="4" y="220" width="276" height="50" uuid="6dfe20e5-721e-4344-8cf6-12708bcb126c"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <staticText>
+                    <reportElement x="3" y="16" width="117" height="19" uuid="101cf6bb-ddfd-4317-a0f3-b92fc2c0416d"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Nom de l'assurance :]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="120" y="17" width="149" height="18" uuid="d7662ada-b505-4d37-9fb2-ab4456b11690"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{assurance}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <frame>
+                <reportElement stretchType="RelativeToBandHeight" x="280" y="220" width="269" height="50" uuid="d4f57dd1-35e1-4eda-865d-e29d56546347"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <staticText>
+                    <reportElement x="3" y="3" width="107" height="19" uuid="66b23f67-6984-428a-a66d-100cb1abba87"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Assuré principal :]]></text>
+                </staticText>
+                <staticText>
+                    <reportElement x="189" y="3" width="74" height="19" uuid="622b1104-fe1f-4a80-a3e8-d6fd8705f19e"/>
+                    <textElement textAlignment="Right" verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Matricule :]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="189" y="25" width="74" height="19" uuid="b0db6208-1860-4fcc-969f-1905a05fa741"/>
+                    <textElement textAlignment="Right" verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{matricule}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="4" y="25" width="176" height="18" uuid="52ec6b3e-635b-43a7-b7a4-64224117fbcb"/>
+                    <textElement verticalAlignment="Middle"/>
+                    <textFieldExpression><![CDATA[$P{assureprincipal}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <frame>
+                <reportElement stretchType="RelativeToBandHeight" x="4" y="270" width="276" height="50" uuid="f3ffc2a2-0199-4f29-8e38-6658746e0aec"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <staticText>
+                    <reportElement x="3" y="16" width="97" height="19" uuid="a48a7af7-6330-4bec-808b-452fadc5bc96"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Prise en charge :]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="100" y="17" width="169" height="18" uuid="ddec8658-eb65-4212-8c87-48ae8c197e8b"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{couverture}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <frame>
+                <reportElement stretchType="RelativeToBandHeight" x="280" y="270" width="269" height="50" uuid="f4353474-c54b-4fe7-b81f-e0c6341b19af"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <staticText>
+                    <reportElement x="3" y="16" width="97" height="19" uuid="5e62fe21-559b-4cc5-87de-9d42f8b75eff"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Client comptant :]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="100" y="17" width="164" height="18" uuid="6d81d6d6-b68e-4174-b273-627db60c6bcf"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{clientcomptant}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <staticText>
+                <reportElement x="151" y="330" width="253" height="30" uuid="7d4810f9-6cc1-4851-b283-714c72f61a1e"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="18"/>
+                </textElement>
+                <text><![CDATA[PERSONNE À PRÉVENIR]]></text>
+            </staticText>
+            <frame>
+                <reportElement stretchType="RelativeToBandHeight" x="280" y="420" width="269" height="50" uuid="45d6074f-4d24-4544-bfae-bdd6c255f2ec"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <staticText>
+                    <reportElement x="3" y="16" width="37" height="19" uuid="cc12609e-05f0-4279-ba0e-90c9f08de35b"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Cel :]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="40" y="17" width="179" height="18" uuid="375d6fc6-b893-4cd7-a784-95e883866df1"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{cel}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <frame>
+                <reportElement stretchType="RelativeToBandHeight" x="280" y="370" width="269" height="50" uuid="018e77f9-f86e-4dab-a597-60109674f58a"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <staticText>
+                    <reportElement x="4" y="3" width="107" height="19" uuid="bbd7582a-4f90-49e1-9d36-5eb7b4f8bd63"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Adresse postale :]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="5" y="25" width="259" height="19" uuid="b6cb8b78-a1c0-4430-8a1c-af061ad04460"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{adressepostale}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <frame>
+                <reportElement stretchType="RelativeToBandHeight" x="4" y="370" width="276" height="50" uuid="e3cec572-a658-48c8-8fc0-4da0dd0b4cda"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <staticText>
+                    <reportElement x="4" y="4" width="107" height="19" uuid="448db4e9-92ab-4c0f-8b77-36ecaf83a44a"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[Nom et Prénom(s) :]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="5" y="26" width="264" height="17" uuid="621c9ffb-3a90-4f8d-85df-09a661296798"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{nomprenom}]]></textFieldExpression>
+                </textField>
+            </frame>
+            <frame>
+                <reportElement stretchType="RelativeToBandHeight" x="4" y="420" width="276" height="50" uuid="f06c6320-0fb4-4800-8e1f-bc85c576d7e0"/>
+                <box>
+                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <staticText>
+                    <reportElement x="3" y="16" width="68" height="19" uuid="46a51a31-9825-4d8f-ac70-e9f8a60c8730"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <text><![CDATA[N° de tél :]]></text>
+                </staticText>
+                <textField>
+                    <reportElement x="71" y="17" width="149" height="19" uuid="06383d1a-f6af-4cbb-8eb9-bf1dd94e07d8"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="12"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$P{tel}]]></textFieldExpression>
+                </textField>
+            </frame>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+</jasperReport>

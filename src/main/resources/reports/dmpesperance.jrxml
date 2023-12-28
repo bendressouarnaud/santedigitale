@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="dossiermedicesperance" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c04d7f5d-78eb-44e6-9747-0a6ae753742a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="numdossier" class="java.lang.String"/>
+	<parameter name="datecreation" class="java.lang.String"/>
+	<parameter name="nompatient" class="java.lang.String"/>
+	<parameter name="prenompatient" class="java.lang.String"/>
+	<parameter name="datenaissance" class="java.lang.String"/>
+	<parameter name="sexe" class="java.lang.String"/>
+	<parameter name="profession" class="java.lang.String"/>
+	<parameter name="contactpatient" class="java.lang.String"/>
+	<parameter name="domicile" class="java.lang.String"/>
+	<parameter name="pere" class="java.lang.String"/>
+	<parameter name="contactpere" class="java.lang.String"/>
+	<parameter name="mere" class="java.lang.String"/>
+	<parameter name="contactmere" class="java.lang.String"/>
+	<parameter name="repondant" class="java.lang.String"/>
+	<parameter name="repondantcontact" class="java.lang.String"/>
+	<parameter name="groupesanguin" class="java.lang.String"/>
+	<parameter name="assurance" class="java.lang.String"/>
+	<parameter name="matricule" class="java.lang.String"/>
+	<parameter name="sociale" class="java.lang.String"/>
+	<parameter name="particulier" class="java.lang.String"/>
+	<parameter name="icone" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="66" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement positionType="Float" x="-11" y="5" width="61" height="55" uuid="a3f6f17d-c2aa-4fe6-905c-297cfa93f351"/>
+				<imageExpression><![CDATA[$P{icone}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="54" y="20" width="362" height="25" uuid="055aaf41-7adb-478d-9fa8-b2fe4b84321d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[CLINIQUE MEDICALE ESPERANCE TOUMODI]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="87" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="4" width="380" height="20" uuid="6076f0e8-6aa0-449a-9703-626e6c86ac5b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONSULTATIONS-HOSPITALISATIONS-BILANS-URGENCES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="24" width="380" height="20" uuid="9a47a1a3-d0a8-4a66-b43a-41617337ea37"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[BP 253 Toumodi – Tel : (+225) 30 62 90 39 – Fax : (+225) 30 62 93 70]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="44" width="380" height="20" uuid="96d960ad-a2ac-413c-842c-4bdc9edd5f9e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Cell : (+225) 40 68 20 66 / (+225) 05 05 80 40 / (+225) 07 84 02 20]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="64" width="380" height="20" uuid="fd390ae3-4fc6-4b3b-b37d-2de16ca31d18"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Email : cliniquesperancetdi@gmail.com]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="548" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" x="320" y="6" width="230" height="50" uuid="7f66eade-0fc7-48de-b6cb-90ed856a1a49"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="330" y="12" width="102" height="20" uuid="696c7914-0f31-4eb4-8697-1db8668615e8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOSSIER N°]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="32" width="129" height="20" uuid="1628923b-0f2a-4b9c-878d-d217e8e64f2d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE DE CRÉATION]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" x="81" y="60" width="398" height="43" uuid="d42c5695-4547-4da0-8195-ee765c535a2b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="90" y="66" width="378" height="30" uuid="9df6a06b-39d2-49a4-a519-dc2b088b8d26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="22"/>
+				</textElement>
+				<text><![CDATA[DOSSIER MEDICAL PATIENT]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" x="30" y="120" width="490" height="139" uuid="531f5493-7b31-4930-90c5-bbca3c1dcb2b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="40" y="130" width="40" height="20" uuid="2a9ce156-f9f5-4687-9480-82f3b16ab724"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[NOM :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="150" width="60" height="20" uuid="77c11fba-db22-46c0-a08f-724f12b70926"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[PRENOMS :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="170" width="180" height="20" uuid="f5aabb6c-d902-457e-a7b8-62c6d50bd14d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DATE DE NAISSANCE (AGE) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="190" width="50" height="20" uuid="62f8fc97-19b5-4320-8a69-ead500a67f74"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[SEXE : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="190" width="89" height="20" uuid="c9e99269-cc0d-4432-bb9d-f651396f0ea6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROFESSION : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="210" width="70" height="20" uuid="6e47c261-8c18-432d-8a8d-99627289d083"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CONTACT : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="230" width="70" height="20" uuid="46760ef0-8da8-4a3d-b0ae-e86a034d7608"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DOMICILE : ]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" x="4" y="270" width="200" height="110" uuid="f17a974e-00b7-4c3c-b6a2-d8ed0c21bfc7"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" x="210" y="270" width="190" height="110" uuid="d677872a-1fa6-480c-a4a1-55f7e20b2220"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" x="409" y="270" width="135" height="110" uuid="1e9d1b35-964c-4c84-a465-92a96894390a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="9" y="274" width="51" height="20" uuid="c4692814-772a-4e77-9a9b-109220809087"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[PERE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="294" width="71" height="20" uuid="a0e97cda-9ef4-4f4b-8107-784066dca205"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CONTACT :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="320" width="51" height="20" uuid="b30e0623-3345-4adf-ab58-3043eb3015eb"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[MERE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="340" width="71" height="20" uuid="e70e494a-1148-4334-a22f-3232370adbd5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CONTACT :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="274" width="172" height="32" uuid="895cc936-764e-4d54-8aa2-b698169da16c"/>
+				<textElement verticalAlignment="Top">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPONDANT OU PERSONNE À CONTACTER SI URGENCE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="340" width="72" height="20" uuid="dee929dc-f01d-4792-83fe-25a516cab5e3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[CONTACT :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="274" width="122" height="32" uuid="e829c6d6-83a0-4b7c-a32d-f059a1c71787"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[GROUPE SANGUIN RHÉSUS :]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" x="4" y="398" width="540" height="140" uuid="12be1410-c21f-4914-be5d-5ff23d6105ae"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="9" y="406" width="460" height="20" uuid="e3bd32a9-ea81-456e-b7eb-8ba5d04f562c"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COUVERTURE MEDICALE (À PRÉCISER AVEC LE NUMÉRO MATRICULE) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="438" width="70" height="20" uuid="563c69bf-1caa-44cc-bc57-cccd2d5d7b93"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Assurance :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="472" width="70" height="20" uuid="d023ada7-e78c-4b87-8414-542f0c13252e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sociale :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="506" width="70" height="20" uuid="ff803bf4-102b-47e9-8f0a-d12c544f3517"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Particulier :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="432" y="12" width="108" height="20" uuid="7ea10e7b-a8a9-445f-83a9-76dfc04d7c26"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numdossier}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="32" width="84" height="20" uuid="aa8212ae-948e-4882-8688-f6ace3e21de6"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{datecreation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="130" width="309" height="20" uuid="135a8b43-389d-4d3e-b7af-d2312c574d33"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{nompatient}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="150" width="340" height="20" uuid="9109e397-8164-4abc-9c1e-74c7b4013cd3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{prenompatient}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="170" width="199" height="20" uuid="a5ee9a41-65b0-49f4-8abe-6cf33fdad20b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{datenaissance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="190" width="80" height="20" uuid="458324bc-d1d1-403e-a93c-94c3300b7920"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{sexe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="190" width="236" height="20" uuid="3babef1c-3907-4bc6-91e8-0673398da55a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{profession}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="210" width="359" height="20" uuid="15886cee-abff-49b6-8ba9-b22a2ea089e7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{contactpatient}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="230" width="400" height="20" uuid="5f4f42b8-1891-4503-bcc1-3fe76d39e7a6"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{domicile}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="274" width="140" height="20" uuid="eef1e586-b63c-4f0e-99c1-041b650f1aaa"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pere}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="294" width="120" height="20" uuid="3a392a43-140b-470b-83b6-d9dce62863a4"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{contactpere}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="320" width="140" height="20" uuid="2468c215-f179-4299-b552-4da5120ca432"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{mere}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="340" width="120" height="20" uuid="37a4d6fe-f8de-4f71-a270-ceacfbfe66ce"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{contactmere}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="217" y="306" width="172" height="24" uuid="05f0bd09-4275-4dd1-8c93-167089329015"/>
+				<textElement verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$P{repondant}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="289" y="340" width="108" height="20" uuid="e7dd9b6b-759b-4015-82ef-ce021ca4ed0e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{repondantcontact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="416" y="310" width="122" height="30" uuid="59fa6d15-b5b9-41cb-8f74-7493fe8fadce"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{groupesanguin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="438" width="160" height="20" uuid="d3505351-17a5-42c0-8327-17551fcad614"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{assurance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="438" width="268" height="19" uuid="baa54deb-a92d-4d3b-957c-726ebd8103f7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{matricule}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="472" width="438" height="20" uuid="52b8fa52-b59e-4e49-b80d-90867249a849"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{sociale}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="506" width="100" height="20" uuid="051baf24-09c6-456a-8972-615c2e396137"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{particulier}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
